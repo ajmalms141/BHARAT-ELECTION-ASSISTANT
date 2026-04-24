@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Election Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="orb orb-saffron"></div>
+        <div class="orb orb-green"></div>
+        <div id="particles" class="particles"></div>
+    </div>
+
+    <div class="header-ribbon"></div>
+
+    <div class="app-layout">
+        <!-- Sidebar Panel -->
+        <aside class="sidebar glass-panel">
+            <div class="hero-section">
+                <div class="chakra-container">
+                    <svg class="ashoka-chakra" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="#000080" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="8" fill="#000080"/>
+                        <!-- 24 spokes -->
+                        <g stroke="#000080" stroke-width="1.5">
+                            <line x1="50" y1="50" x2="50" y2="5"/> <line x1="50" y1="50" x2="50" y2="95"/>
+                            <line x1="50" y1="50" x2="5" y2="50"/> <line x1="50" y1="50" x2="95" y2="50"/>
+                            <line x1="50" y1="50" x2="81.8" y2="18.2"/> <line x1="50" y1="50" x2="18.2" y2="81.8"/>
+                            <line x1="50" y1="50" x2="18.2" y2="18.2"/> <line x1="50" y1="50" x2="81.8" y2="81.8"/>
+                            <line x1="50" y1="50" x2="91.5" y2="32.6"/> <line x1="50" y1="50" x2="8.5" y2="67.4"/>
+                            <line x1="50" y1="50" x2="8.5" y2="32.6"/> <line x1="50" y1="50" x2="91.5" y2="67.4"/>
+                            <line x1="50" y1="50" x2="67.4" y2="8.5"/> <line x1="50" y1="50" x2="32.6" y2="91.5"/>
+                            <line x1="50" y1="50" x2="32.6" y2="8.5"/> <line x1="50" y1="50" x2="67.4" y2="91.5"/>
+                            <line x1="50" y1="50" x2="98" y2="62"/> <line x1="50" y1="50" x2="2" y2="38"/>
+                            <line x1="50" y1="50" x2="2" y2="62"/> <line x1="50" y1="50" x2="98" y2="38"/>
+                            <line x1="50" y1="50" x2="62" y2="98"/> <line x1="50" y1="50" x2="38" y2="2"/>
+                            <line x1="50" y1="50" x2="38" y2="98"/> <line x1="50" y1="50" x2="62" y2="2"/>
+                        </g>
+                    </svg>
+                </div>
+                <h1>Bharat Election Assistant</h1>
+                <p class="subtitle">Your trusted guide to India's democratic process</p>
+                <div class="divider"></div>
+            </div>
+
+            <nav class="quick-links">
+                <a href="#" class="link-item">
+                    <span class="icon">🗳️</span> Voter Registration
+                </a>
+                <a href="#" class="link-item">
+                    <span class="icon">📍</span> Check Polling Booth
+                </a>
+                <a href="#" class="link-item">
+                    <span class="icon">📅</span> Election Schedule
+                </a>
+                <a href="#" class="link-item">
+                    <span class="icon">👤</span> Candidate Info
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer-illustration">
+                <svg viewBox="0 0 200 60" class="skyline" fill="rgba(255,255,255,0.05)">
+                    <rect x="10" y="30" width="20" height="30"/>
+                    <path d="M40 20 L60 0 L80 20 L80 60 L40 60 Z"/>
+                    <rect x="90" y="10" width="30" height="50"/>
+                    <path d="M130 40 Q 150 20 170 40 L170 60 L130 60 Z"/>
+                    <rect x="180" y="25" width="15" height="35"/>
+                </svg>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-wrapper glass-panel">
+            <div id="chat-box" class="chat-box">
+                <div class="message bot-message">
+                    <div class="avatar chakra-avatar">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="4"/>
+                            <circle cx="50" cy="50" r="10" fill="#fff"/>
+                            <!-- simplified spokes for avatar -->
+                            <g stroke="#fff" stroke-width="4">
+                                <line x1="50" y1="50" x2="50" y2="5"/> <line x1="50" y1="50" x2="50" y2="95"/>
+                                <line x1="50" y1="50" x2="5" y2="50"/> <line x1="50" y1="50" x2="95" y2="50"/>
+                                <line x1="50" y1="50" x2="81.8" y2="18.2"/> <line x1="50" y1="50" x2="18.2" y2="81.8"/>
+                                <line x1="50" y1="50" x2="18.2" y2="18.2"/> <line x1="50" y1="50" x2="81.8" y2="81.8"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="message-content">
+                        <p>Namaste! 🙏 I am your Bharat Election Assistant. I can help you understand the election process, voting timelines, and how to participate in the world's largest democracy. What would you like to know?</p>
+                        <span class="timestamp">Just now</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Ask about voting, registration, dates..." autocomplete="off">
+                <button id="send-btn" aria-label="Send Message">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-tricolor"></div>
+        <p>Jai Hind 🇮🇳 — Built for every Indian voter</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
