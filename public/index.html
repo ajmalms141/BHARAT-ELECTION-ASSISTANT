@@ -3,30 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bharat Election Assistant</title>
+    <title>Bharat Election Assistant | Matdata Mitra 🇮🇳</title>
+    <meta name="description" content="Matdata Mitra — Your AI-powered guide to India's democratic process. Get answers about voter registration, polling booths, election schedules, and more.">
+    <meta name="keywords" content="India election, voter registration, ECI, NVSP, voting guide, Lok Sabha, election assistant">
+    <meta name="author" content="Ajmal MS">
+    <meta property="og:title" content="Bharat Election Assistant | Matdata Mitra">
+    <meta property="og:description" content="Your AI-powered guide to India's democratic process.">
+    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-effects">
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#user-input" class="skip-link">Skip to chat input</a>
+
+    <div class="background-effects" aria-hidden="true">
         <div class="orb orb-saffron"></div>
         <div class="orb orb-green"></div>
         <div id="particles" class="particles"></div>
     </div>
 
-    <div class="header-ribbon"></div>
+    <div class="header-ribbon" role="presentation" aria-hidden="true"></div>
 
     <div class="app-layout">
         <!-- Sidebar Panel -->
-        <aside class="sidebar glass-panel">
+        <aside class="sidebar glass-panel" role="complementary" aria-label="Election Assistant Navigation">
             <div class="hero-section">
-                <div class="chakra-container">
-                    <svg class="ashoka-chakra" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <div class="chakra-container" aria-hidden="true">
+                    <svg class="ashoka-chakra" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                         <circle cx="50" cy="50" r="45" fill="none" stroke="#000080" stroke-width="2"/>
                         <circle cx="50" cy="50" r="8" fill="#000080"/>
-                        <!-- 24 spokes -->
                         <g stroke="#000080" stroke-width="1.5">
                             <line x1="50" y1="50" x2="50" y2="5"/> <line x1="50" y1="50" x2="50" y2="95"/>
                             <line x1="50" y1="50" x2="5" y2="50"/> <line x1="50" y1="50" x2="95" y2="50"/>
@@ -44,27 +52,44 @@
                     </svg>
                 </div>
                 <h1>Bharat Election Assistant</h1>
-                <p class="subtitle">Your trusted guide to India's democratic process</p>
-                <div class="divider"></div>
+                <p class="subtitle">मतदाता मित्र — Your trusted guide to India's democratic process</p>
+                <div class="divider" aria-hidden="true"></div>
             </div>
 
-            <nav class="quick-links">
-                <a href="#" class="link-item">
-                    <span class="icon">🗳️</span> Voter Registration
-                </a>
-                <a href="#" class="link-item">
-                    <span class="icon">📍</span> Check Polling Booth
-                </a>
-                <a href="#" class="link-item">
-                    <span class="icon">📅</span> Election Schedule
-                </a>
-                <a href="#" class="link-item">
-                    <span class="icon">👤</span> Candidate Info
-                </a>
+            <nav class="quick-links" aria-label="Quick election topics">
+                <p class="nav-label">Quick Topics</p>
+                <button class="link-item" data-query="How do I register as a voter in India? What documents do I need?" aria-label="Ask about voter registration">
+                    <span class="icon" aria-hidden="true">🗳️</span> Voter Registration
+                </button>
+                <button class="link-item" data-query="How do I check and find my polling booth location?" aria-label="Ask about polling booth location">
+                    <span class="icon" aria-hidden="true">📍</span> Check Polling Booth
+                </button>
+                <button class="link-item" data-query="What is the schedule and timeline for upcoming elections in India?" aria-label="Ask about election schedule">
+                    <span class="icon" aria-hidden="true">📅</span> Election Schedule
+                </button>
+                <button class="link-item" data-query="What is NOTA and how can I use it while voting?" aria-label="Ask about NOTA">
+                    <span class="icon" aria-hidden="true">✅</span> NOTA Explained
+                </button>
+                <button class="link-item" data-query="What is the Model Code of Conduct during Indian elections?" aria-label="Ask about Model Code of Conduct">
+                    <span class="icon" aria-hidden="true">📋</span> Model Code of Conduct
+                </button>
+                <button class="link-item" data-query="How does the EVM (Electronic Voting Machine) work in India?" aria-label="Ask about EVMs">
+                    <span class="icon" aria-hidden="true">🖥️</span> How EVMs Work
+                </button>
             </nav>
-            
-            <div class="sidebar-footer-illustration">
-                <svg viewBox="0 0 200 60" class="skyline" fill="rgba(255,255,255,0.05)">
+
+            <div class="sidebar-actions">
+                <button id="new-chat-btn" class="new-chat-btn" aria-label="Start a new conversation">
+                    <span aria-hidden="true">🔄</span> New Conversation
+                </button>
+                <div class="lang-toggle" role="group" aria-label="Language selection">
+                    <button id="lang-en" class="lang-btn active" aria-pressed="true" aria-label="Switch to English">EN</button>
+                    <button id="lang-hi" class="lang-btn" aria-pressed="false" aria-label="Switch to Hindi">हिं</button>
+                </div>
+            </div>
+
+            <div class="sidebar-footer-illustration" aria-hidden="true">
+                <svg viewBox="0 0 200 60" class="skyline" fill="rgba(255,255,255,0.05)" aria-hidden="true">
                     <rect x="10" y="30" width="20" height="30"/>
                     <path d="M40 20 L60 0 L80 20 L80 60 L40 60 Z"/>
                     <rect x="90" y="10" width="30" height="50"/>
@@ -75,14 +100,24 @@
         </aside>
 
         <!-- Main Chat Area -->
-        <main class="chat-wrapper glass-panel">
-            <div id="chat-box" class="chat-box">
-                <div class="message bot-message">
-                    <div class="avatar chakra-avatar">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <main class="chat-wrapper glass-panel" role="main" aria-label="Election Assistant Chat">
+            <div class="chat-header">
+                <div class="chat-status">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span>Matdata Mitra is online</span>
+                </div>
+                <span class="helpline-badge" title="National Voter Helpline">📞 Helpline: 1950</span>
+            </div>
+
+            <!-- Live region for screen reader announcements -->
+            <div id="sr-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+            <div id="chat-box" class="chat-box" role="log" aria-label="Chat messages" aria-live="polite" aria-relevant="additions">
+                <div class="message bot-message" role="article" aria-label="Assistant message">
+                    <div class="avatar chakra-avatar" aria-hidden="true">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <circle cx="50" cy="50" r="45" fill="none" stroke="#fff" stroke-width="4"/>
                             <circle cx="50" cy="50" r="10" fill="#fff"/>
-                            <!-- simplified spokes for avatar -->
                             <g stroke="#fff" stroke-width="4">
                                 <line x1="50" y1="50" x2="50" y2="5"/> <line x1="50" y1="50" x2="50" y2="95"/>
                                 <line x1="50" y1="50" x2="5" y2="50"/> <line x1="50" y1="50" x2="95" y2="50"/>
@@ -92,24 +127,42 @@
                         </svg>
                     </div>
                     <div class="message-content">
-                        <p>Namaste! 🙏 I am your Bharat Election Assistant. I can help you understand the election process, voting timelines, and how to participate in the world's largest democracy. What would you like to know?</p>
-                        <span class="timestamp">Just now</span>
+                        <p>Namaste! 🙏 I am <strong>Matdata Mitra</strong>, your Bharat Election Assistant. I can help you understand the election process, voter registration, EVMs, and how to participate in the world's largest democracy.</p>
+                        <p>You can ask me in <strong>English or Hindi</strong>!</p>
+                        <span class="timestamp" aria-label="Message sent just now">Just now</span>
                     </div>
                 </div>
             </div>
 
-            <div class="input-area">
-                <input type="text" id="user-input" placeholder="Ask about voting, registration, dates..." autocomplete="off">
-                <button id="send-btn" aria-label="Send Message">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            <div class="suggestions-bar" id="suggestions-bar" aria-label="Suggested follow-up questions" role="region"></div>
+
+            <div class="input-area" role="form" aria-label="Send a message">
+                <div class="input-wrapper">
+                    <label for="user-input" class="sr-only">Type your election question</label>
+                    <input
+                        type="text"
+                        id="user-input"
+                        placeholder="Ask about voting, registration, EVMs, dates... (EN or हिंदी)"
+                        autocomplete="off"
+                        maxlength="2000"
+                        aria-label="Type your election question here"
+                        aria-describedby="char-counter"
+                    >
+                    <span id="char-counter" class="char-counter" aria-live="polite" aria-label="Character count">0/2000</span>
+                </div>
+                <button id="voice-btn" class="icon-btn" aria-label="Start voice input" title="Voice Input">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                </button>
+                <button id="send-btn" aria-label="Send message">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                 </button>
             </div>
         </main>
     </div>
 
-    <footer>
-        <div class="footer-tricolor"></div>
-        <p>Jai Hind 🇮🇳 — Built for every Indian voter</p>
+    <footer role="contentinfo">
+        <div class="footer-tricolor" aria-hidden="true"></div>
+        <p>Jai Hind 🇮🇳 — Built for every Indian voter | <a href="https://eci.gov.in" target="_blank" rel="noopener noreferrer" aria-label="Visit Election Commission of India website">eci.gov.in</a> | Helpline: <a href="tel:1950" aria-label="Call National Voter Helpline 1950">1950</a></p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>

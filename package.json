@@ -1,16 +1,51 @@
 {
-  "name": "election-assistant",
-  "version": "1.0.0",
-  "description": "AI Election Assistant for Hack2Skill",
+  "name": "bharat-election-assistant",
+  "version": "2.0.0",
+  "description": "AI-powered election assistant for Indian voters using Google Gemini. Built for Hack2Skill Challenge.",
   "main": "server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "test": "jest --coverage --forceExit",
+    "test:watch": "jest --watch"
   },
+  "keywords": [
+    "election",
+    "india",
+    "gemini",
+    "ai",
+    "voting",
+    "civic-tech",
+    "hack2skill"
+  ],
+  "author": "Ajmal MS",
+  "license": "MIT",
   "dependencies": {
-    "@google/generative-ai": "latest",
+    "@google/generative-ai": "^0.24.0",
+    "compression": "^1.7.5",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.5.0",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "server.js",
+      "!src/utils/logger.js"
+    ]
   }
 }
