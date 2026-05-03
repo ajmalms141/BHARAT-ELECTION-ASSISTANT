@@ -44,7 +44,7 @@ Your tone: Helpful, respectful, informative, and patriotic. Celebrate democracy!
  * Model configuration for optimal election assistance responses.
  */
 const MODEL_CONFIG = {
-  model: 'gemini-2.0-flash',
+  model: 'gemini-2.5-flash',
   systemInstruction: SYSTEM_INSTRUCTION,
   generationConfig: {
     temperature: 0.2,
